@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  // justify-content: space-between;
   background: white;
 }
 
@@ -9,4 +9,11 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.button {
+  text-decoration: none;
+  box-shadow: 2px 2px 2px black;
+  color: black;
+  padding: 6px;
 }

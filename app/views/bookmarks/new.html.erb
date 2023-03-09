@@ -1,0 +1,9 @@
+<%= link_to "Back to Lists", lists_path, class: "btn btn-primary" %>
+
+<h1>Bookmark A Movie</h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.button :submit %>
+<% end %>
