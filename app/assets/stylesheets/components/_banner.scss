@@ -9,3 +9,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.list_page {
+
+    background-image: asset-url("action.jpg");
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -6,6 +6,10 @@
   <div class="d-flex">
      <h2><%= movie.title.capitalize %></h2>
   <p ><%= movie.rating %></p>
+  <% bookmark = Bookmark.find_by(movie: movie, list: @list ) %>
+  <%= link_to "Delete", bookmark_path(bookmark), class: "btn btn-primary",
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
   </div>
 
   <p><%= movie.overview %></p>
