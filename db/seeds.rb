@@ -22,16 +22,14 @@ require "open-uri"
 
 # puts 'finished'
 
-
-
-url = "https://tmdb.lewagon.com/movie/top_rated"
+url = 'https://tmdb.lewagon.com/movie/top_rated'
 user_serialized = URI.open(url).read
 user = JSON.parse(user_serialized)
 
 results = user['results']
 
 results.each do |result|
-  Movie.create(title: result["title"], overview: result["overview"], poster_url: "https://image.tmdb.org/t/p/w500/#{result["poster_path"]}", rating: result["vote_average"] )
+  Movie.create(title: result['title'], overview: result['overview'], poster_url: 'https://image.tmdb.org/t/p/w500/#{result["poster_path"]}', rating: result['vote_average'] )
 end
 
 # p user['results']

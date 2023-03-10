@@ -1,3 +1,4 @@
+# Class for my bookmark controller
 class BookmarksController < ApplicationController
 
   def new
