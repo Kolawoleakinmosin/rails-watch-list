@@ -14,12 +14,8 @@
   <div class="row row-cols-2">
     <% @lists.each do |list| %>
       <div class="col mb-4 py-3">
-        <div style="width: 18rem;">
-          <% if list.photo.present? %>
+        <div style="width: 10rem;">
             <%= cl_image_tag list.photo.key, height: 200, width: 286, crop: :fill %>
-          <% else %>
-            <%= cl_image_tag("85s4bqqdlgy1am0dnbiq0qnh5xl8", width: 286, height: 200, crop: :fill) %>
-          <% end %>
           <div class="card-body">
             <h5 class="card-title"><%= list.name.capitalize %></h5>
             <%= link_to 'View This List', list, class: "btn btn-primary" %>
